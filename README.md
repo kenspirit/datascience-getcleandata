@@ -79,5 +79,5 @@ For example:
 
 Two output files are generated in the same directory of the program.
 
-* `cleanup_data.csv` - Dataset generated after performing the first three analysis steps.
-* `average_per_subject_and_activity.csv` - Dataset generated after performing the fourth step.
+* `cleanup_data.txt` - Dataset generated after performing the first three analysis steps.
+* `average_per_subject_and_activity.txt` - Dataset generated after performing the fourth step.

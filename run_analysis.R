@@ -124,14 +124,14 @@ RunAnalysis <- function() {
   data.all <- merge(activity.names, data.all, by.y = "Activity", by.x = "code", all.y = T)
   data.all$code = NULL
 
-  write.csv(data.all, file = "./cleanup_data.csv", row.names = F)
+  write.csv(data.all, file = "./cleanup_data.txt", row.names = F)
 
   data.avg <- merge(activity.names, data.avg, by.y = "Activity", by.x = "code", all.y = T)
   data.avg$code = NULL
   data.avg["Group.1"] = NULL
   data.avg["Group.2"] = NULL
 
-  write.csv(data.avg, file = "./average_per_subject_and_activity.csv", row.names = F)
+  write.csv(data.avg, file = "./average_per_subject_and_activity.txt", row.names = F)
 }
 
 RunAnalysis()
