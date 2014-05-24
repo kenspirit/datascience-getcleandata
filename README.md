@@ -12,7 +12,7 @@ This program is just for educational purpose and please read through the License
 2. Put the downloaded file into the same directory of the program.
 3. Enter the `R` CLI (command line interface)
 4. Set the working directory to current folder containing the data and program
-5. Execute command `source(run_analysis.R)`
+5. Execute command `source("run_analysis.R")`
 
 
 # Tested under what environment?
@@ -22,7 +22,7 @@ This program is just for educational purpose and please read through the License
 
 # What are the analysis steps?
 
-1. Merge the training and testing data set in the archive file.
+1. Merge the training and testing data set.
 2. Extract only the measurements on the mean and standard deviation for each measurement.
 3. Rename the measurement column to be a more descriptive name.
 4. Create a dataset with the average of each measurement per each activity and each subject.
@@ -75,7 +75,7 @@ For example:
 * `tBodyAcc-mean()-X` -> `Time.domain.Body.linear.acceleration.Mean.X.axis`
 * `angle(tBodyAccMean,gravity)` -> `Angle.of.Time.domain.Body.linear.acceleration.Mean.and.Gravity`
 
-# What are the outputs?
+# What is the output?
 
 One tidy dataset is generated in the same directory of the program after executing the 4 analysis steps.
 
