@@ -1,7 +1,7 @@
 setwd(".")
 
 # Unzip the Samsung data
-# unzip("getdata-projectfiles-UCI HAR Dataset.zip")
+unzip("getdata-projectfiles-UCI HAR Dataset.zip")
 
 GetDataPath <- function(file) {
   paste0("./UCI HAR Dataset", "/", file, collapse = "")
@@ -85,7 +85,7 @@ Beautify <- function(name) {
 
 GetDataSet <- function(name, feature.name, activity.names) {
   GetData <- function(type, cols) {
-    file.path = GetDataPath(paste0(name, "/", type, "_", name, "_Sample.txt"))
+    file.path = GetDataPath(paste0(name, "/", type, "_", name, ".txt"))
     read.table(file.path, stringsAsFactors = F, col.names = cols)
   }
 
@@ -121,11 +121,6 @@ RunAnalysis <- function() {
   data.avg <- aggregate(data.all, by = list(data.all$Activity, data.all$Subject), FUN = "mean")
 
   # 3 Label activity name to data set.  Done after obtaining average value
-  data.all <- merge(activity.names, data.all, by.y = "Activity", by.x = "code", all.y = T)
-  data.all$code = NULL
-
-  write.csv(data.all, file = "./cleanup_data.txt", row.names = F)
-
   data.avg <- merge(activity.names, data.avg, by.y = "Activity", by.x = "code", all.y = T)
   data.avg$code = NULL
   data.avg["Group.1"] = NULL

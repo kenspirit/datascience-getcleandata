@@ -77,7 +77,6 @@ For example:
 
 # What are the outputs?
 
-Two output files are generated in the same directory of the program.
+One tidy dataset is generated in the same directory of the program after executing the 4 analysis steps.
 
-* `cleanup_data.txt` - Dataset generated after performing the first three analysis steps.
-* `average_per_subject_and_activity.txt` - Dataset generated after performing the fourth step.
+* `average_per_subject_and_activity.txt`
