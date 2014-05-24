@@ -1,5 +1,12 @@
 setwd(".")
 
+datafile.name <- "getdata-projectfiles-UCI HAR Dataset.zip"
+
+if (!file.exists(datafile.name)) {
+  print(paste0("Expected data file '", datafile.name, "' doesnot exists.", collapse = ""))
+  quit(save = "no")
+}
+
 # Unzip the Samsung data
 unzip("getdata-projectfiles-UCI HAR Dataset.zip")
 
