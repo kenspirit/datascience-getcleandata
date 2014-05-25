@@ -57,6 +57,9 @@ Based on the `features_info.txt` file in the archive file.
 
 ## How to rename the measurement to be more descriptive.
 
+Style guide I takes is the Google one:
+https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
+
 A mapping is built as below:
 * `f` -> `Fast.Fourier.Transformed`
 * `t` -> `Time.domain`
